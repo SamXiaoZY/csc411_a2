@@ -76,7 +76,7 @@ def DisplayPlot(train, valid, ylabel, number=0):
     plt.plot(valid[:, 0], valid[:, 1], 'g', label='Validation')
     plt.xlabel('Epoch')
     plt.ylabel(ylabel)
-    plt.legend()
+    plt.legend(loc='best')
     plt.draw()
     plt.pause(0.0001)
 
