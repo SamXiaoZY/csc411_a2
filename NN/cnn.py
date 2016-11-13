@@ -468,11 +468,11 @@ def main():
         CheckGrad(model, CNNForward, CNNBackward, 'b1', x)
 
         # Train model.
-        stats = Train(model, CNNForward, CNNBackward, CNNUpdate, config['eps'],
+        trained_model, stats = Train(model, CNNForward, CNNBackward, CNNUpdate, config['eps'],
                       config['momentum'], config['num_epochs'], config['batch_size'])
 
         # Uncomment if you wish to save the model.
-        Save(config['model_fname'], model)
+        Save(config['model_fname'], trained_model)
 
         # Uncomment if you wish to save the training statistics.
         Save(config['stats_fname'], stats)
