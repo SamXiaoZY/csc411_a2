@@ -524,9 +524,6 @@ def main():
 
     for key, config in configs.items():
         # Initialize model.
-        if key != '3.3 - hidden=32,32':
-            continue
-
         model = InitNN(num_inputs, config['num_hiddens'], num_outputs)
 
         # Uncomment to reload trained model here.
